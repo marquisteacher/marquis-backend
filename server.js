@@ -88,7 +88,7 @@ app.use((err, req, res, next) => {
 });
 
 // ── START ─────────────────────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT,'0.0.0.0', () => {
   console.log('');
   console.log('  🎓 MarquisTeacher Academy API');
   console.log('  ─────────────────────────────');
