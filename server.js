@@ -13,6 +13,7 @@ const examRoutes    = require('./routes/exam');
 const contactRoutes = require('./routes/contact');
 
 const app  = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3000;
 
 // ── MIDDLEWARE ────────────────────────────────────────────────
