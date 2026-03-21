@@ -31,6 +31,18 @@ app.use(cors({
   credentials: true
 }));
 
+app.use(cors({
+  origin: [
+    'https://marquisteacher.github.io',
+    'https://marquisteacher.github.io/marquisteacher-academy',
+    'https://marquisteacher.github.io/marquisteacher-tutor',
+    'http://localhost:5500',
+    'http://127.0.0.1:5500',
+    process.env.FRONTEND_URL
+  ],
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  credentials: true
+}));
 // Parse JSON
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
